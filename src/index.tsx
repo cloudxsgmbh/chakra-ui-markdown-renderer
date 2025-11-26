@@ -20,10 +20,10 @@ import { chakra } from '@chakra-ui/react';
 
 type GetCoreProps = {
   children?: React.ReactNode;
-  'data-sourcepos'?: any;
+  'data-sourcepos'?: unknown;
 };
 
-function getCoreProps(props: GetCoreProps): any {
+function getCoreProps(props: GetCoreProps): unknown {
   return props['data-sourcepos']
     ? { 'data-sourcepos': props['data-sourcepos'] }
     : {};
@@ -87,7 +87,7 @@ export const defaults: Defaults = {
   ul: props => {
     const { ordered, children, depth } = props;
     const attrs = getCoreProps(props);
-    let Element = ListRoot;
+    const Element = ListRoot;
     let styleType = 'disc';
     if (ordered) {
       Element.defaultProps = { as: 'ol' };
@@ -109,7 +109,7 @@ export const defaults: Defaults = {
   ol: props => {
     const { ordered, children, depth } = props;
     const attrs = getCoreProps(props);
-    let Element = ListRoot;
+    const Element = ListRoot;
     let styleType = 'disc';
     if (ordered) {
       Element.defaultProps = { as: 'ol' };
