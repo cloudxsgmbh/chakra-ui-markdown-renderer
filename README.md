@@ -1,4 +1,4 @@
-## Chakra UI Markdown Renderer
+# Chakra UI Markdown Renderer
 
  <a href="https://www.npmjs.com/package/chakra-ui-markdown-renderer" alt="NPM">
   <img src="https://img.shields.io/npm/v/chakra-ui-markdown-renderer?color=green&style=flat-square" />
@@ -6,11 +6,11 @@
 
 This package is created for people who using [Chakra-UI's](https://chakra-ui.com/) and [react-markdown](https://github.com/remarkjs/react-markdown) together.
 
-### The Problem
+## The Problem
 
 CSSReset component is turning down every default style of elements that provided by browser. HTML elements like h1, h2, h3... aren't get default styles but Markdown need them for rendering purposes. This package is solving the problem by changing renderer defaults with chakra-ui's components.
 
-### Install
+## Install
 
 - Install @chakra-ui/react by following their [Getting Started - Chakra UI](https://chakra-ui.com/getting-started) guide.
 - Install [react-markdown](https://github.com/remarkjs/react-markdown).
@@ -24,7 +24,7 @@ $ yarn add chakra-ui-markdown-renderer
 $ npm i chakra-ui-markdown-renderer
 ```
 
-### Usage
+## Usage
 
 ```jsx
 import ChakraUIRenderer from 'chakra-ui-markdown-renderer';
@@ -32,7 +32,7 @@ import ChakraUIRenderer from 'chakra-ui-markdown-renderer';
 <ReactMarkdown components={ChakraUIRenderer()} children={markdown} skipHtml />;
 ```
 
-### Extending Defaults
+## Extending Defaults
 
 `chakra-ui-markdown-renderer` is merging standart theme with your theme by default.
 
@@ -57,6 +57,11 @@ const newTheme = {
 />;
 ```
 
-#### Alternative ways
+## Alternative ways
 
 [@nikolovlazar/chakra-ui-prose](https://www.npmjs.com/package/@nikolovlazar/chakra-ui-prose) might also work depends on your needs.
+
+
+## Credits
+* https://github.com/mustaphaturhan/chakra-ui-markdown-renderer/
+* https://github.com/Cargonerds/chakra-ui-markdown-renderer/
